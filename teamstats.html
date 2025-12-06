@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HuddleUp</title>
+    <link rel="stylesheet" href="huddleup.css">
+</head>
+<body>
+    <header>
+        <h1>HuddleUp</h1>
+    </header>
+
+ <nav class="site-nav" aria-label="Primary">
+    <ul class="nav-list"></ul>  
+        <b>
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="schedules.html">Schedules</a>&nbsp;&nbsp;&nbsp;
+            <a href="teamstats.html">Teams and Stats</a>&nbsp;&nbsp;&nbsp;
+        </b>
+    </nav>
+
+    
+
+
+<main id="content">
+    <h1 class="section-title center-text">Team &amp; Stats</h1>
+    <p class="center-text tagline"style='font-family:"Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; font-size:2rem; line-height:1.6; color:#222;'>
+      League Leaders — Top Teams by Key Metrics</p>
+
+
+    <section class="stats-container" aria-label="League leaders">
+      <div class="stats-grid">
+
+    
+        <article class="stats-card" aria-labelledby="bb-title">
+          <header class="stats-card-header">
+            <h2 id="bb-title">Basketball Leaders</h2>
+            <span class="badge badge-hoops">Basketball</span>
+          </header>
+
+      
+          <div class="tabs" role="tablist" aria-label="Basketball leaders view">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="bb-teams" id="bb-teams-tab">Teams</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="bb-players" id="bb-players-tab">Players</button>
+          </div>
+
+
+          <div class="tab-panel show" id="bb-teams" role="tabpanel" aria-labelledby="bb-teams-tab">
+            <table class="stats-table" aria-label="Basketball team leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="ppg">Points / Game</th>
+                  <th scope="col" data-sort="rpg">Rebounds</th>
+                  <th scope="col" data-sort="apg">Assists</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>McDonough Hawks</td><td>89.4</td><td>42</td><td>18</td></tr>
+                <tr><td>Hampton Hornets</td><td>85.6</td><td>39</td><td>20</td></tr>
+                <tr><td>Riverdale Rockets</td><td>82.1</td><td>44</td><td>16</td></tr>
+                <tr><td>West Ridge Wolves</td><td>80.3</td><td>41</td><td>17</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+         
+          <div class="tab-panel" id="bb-players" role="tabpanel" aria-labelledby="bb-players-tab" hidden>
+            <table class="stats-table" aria-label="Basketball player leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="player">Player</th>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="ppg">Points / Game</th>
+                  <th scope="col" data-sort="apg">Assists</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>J. Carter</td><td>McDonough Hawks</td><td>24.8</td><td>6.1</td></tr>
+                <tr><td>M. Diaz</td><td>Hampton Hornets</td><td>22.3</td><td>7.4</td></tr>
+                <tr><td>L. Green</td><td>Riverdale Rockets</td><td>20.9</td><td>5.0</td></tr>
+                <tr><td>K. White</td><td>West Ridge Wolves</td><td>19.7</td><td>4.8</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+   
+        <article class="stats-card" aria-labelledby="bs-title">
+          <header class="stats-card-header">
+            <h2 id="bs-title">Baseball Leaders</h2>
+            <span class="badge badge-baseball">Baseball</span>
+          </header>
+
+       
+          <div class="tabs" role="tablist" aria-label="Baseball leaders view">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="bs-teams" id="bs-teams-tab">Teams</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="bs-players" id="bs-players-tab">Players</button>
+          </div>
+
+       
+          <div class="tab-panel show" id="bs-teams" role="tabpanel" aria-labelledby="bs-teams-tab">
+            <table class="stats-table" aria-label="Baseball team leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="avg">Batting Avg</th>
+                  <th scope="col" data-sort="hr">Home Runs</th>
+                  <th scope="col" data-sort="rbi">RBIs</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>McDonough River Cats</td><td>.296</td><td>58</td><td>214</td></tr>
+                <tr><td>Meadowbrook Mavericks</td><td>.287</td><td>62</td><td>205</td></tr>
+                <tr><td>Southgate Stallions</td><td>.281</td><td>55</td><td>199</td></tr>
+                <tr><td>Brookhaven Bears</td><td>.274</td><td>60</td><td>188</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        
+          <div class="tab-panel" id="bs-players" role="tabpanel" aria-labelledby="bs-players-tab" hidden>
+            <table class="stats-table" aria-label="Baseball player leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="player">Player</th>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="avg">AVG</th>
+                  <th scope="col" data-sort="hr">HR</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>A. Brooks</td><td>River Cats</td><td>.342</td><td>18</td></tr>
+                <tr><td>T. Nguyen</td><td>Mavericks</td><td>.331</td><td>21</td></tr>
+                <tr><td>S. Patel</td><td>Stallions</td><td>.318</td><td>17</td></tr>
+                <tr><td>R. Johnson</td><td>Bears</td><td>.309</td><td>19</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+    
+        <article class="stats-card" aria-labelledby="fb-title">
+          <header class="stats-card-header">
+            <h2 id="fb-title">Football Leaders</h2>
+            <span class="badge badge-football">Football</span>
+          </header>
+
+          
+          <div class="tabs" role="tablist" aria-label="Football leaders view">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="fb-teams" id="fb-teams-tab">Teams</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="fb-players" id="fb-players-tab">Players</button>
+          </div>
+
+     
+          <div class="tab-panel show" id="fb-teams" role="tabpanel" aria-labelledby="fb-teams-tab">
+            <table class="stats-table" aria-label="Football team leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="ypg">Yards / Game</th>
+                  <th scope="col" data-sort="td">Touchdowns</th>
+                  <th scope="col" data-sort="tak">Tackles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Union Grove Titans</td><td>412</td><td>32</td><td>386</td></tr>
+                <tr><td>Ola Mustangs</td><td>398</td><td>29</td><td>372</td></tr>
+                <tr><td>Stockbridge Tigers</td><td>385</td><td>31</td><td>361</td></tr>
+                <tr><td>Locust Grove Wildcats</td><td>377</td><td>28</td><td>355</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+         
+          <div class="tab-panel" id="fb-players" role="tabpanel" aria-labelledby="fb-players-tab" hidden>
+            <table class="stats-table" aria-label="Football player leaders">
+              <thead>
+                <tr>
+                  <th scope="col" data-sort="player">Player</th>
+                  <th scope="col" data-sort="team">Team</th>
+                  <th scope="col" data-sort="ypg">Yards / Game</th>
+                  <th scope="col" data-sort="td">Touchdowns</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>D. Harris</td><td>Titans</td><td>124</td><td>12</td></tr>
+                <tr><td>C. Moore</td><td>Mustangs</td><td>118</td><td>11</td></tr>
+                <tr><td>J. Reed</td><td>Tigers</td><td>112</td><td>10</td></tr>
+                <tr><td>P. Walker</td><td>Wildcats</td><td>107</td><td>9</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+  
+  <div class="center-text contact-block">
+    <p style='font-family:"Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; line-height:1.6;'>
+    Contact Information:</p>
+    HuddleUp<br>
+    123 Sports Lane<br>
+    Atlanta, GA 30006<br>
+    888-555-5555<br><br>
+  </div>
+</main>
+
+     <footer>
+        <NAV>
+            <b>
+            <a href="contactus.html">Contact Us</a>
+            <a href="faqs.html">FAQs</a> <br>
+             </b>
+        </NAV>
+    <small>
+        <br>
+        <br>
+        <i>Copyright © 2025 HuddleUp</i><br>
+        <a href="mailto:TerranceWynn@huddleup.com">TerranceWynn@huddleup.com</a>
+    </small>
+</footer>
+
+
+<script>
+  (function () {
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTabs);
+    } else {
+      initTabs();
+    }
+
+    function initTabs() {
+      document.querySelectorAll('.stats-card').forEach(card => {
+        const tabs = card.querySelectorAll('.tab[role="tab"]');
+        const panels = card.querySelectorAll('.tab-panel[role="tabpanel"]');
+
+        if (!tabs.length || !panels.length) return;
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const targetId = tab.getAttribute('aria-controls');
+            const targetPanel = card.querySelector('#' + CSS.escape(targetId));
+
+            
+            if (!targetPanel) {
+              console.warn('No panel found for', targetId, 'in this card.');
+              return;
+            }
+
+            
+            tabs.forEach(t => {
+              const isActive = t === tab;
+              t.classList.toggle('active', isActive);
+              t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+              t.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            
+            panels.forEach(panel => {
+              const show = panel === targetPanel;
+              panel.classList.toggle('show', show);
+              panel.toggleAttribute('hidden', !show);
+            });
+          });
+        });
+
+        
+        const activeTab = card.querySelector('.tab.active') || tabs[0];
+        const initialTargetId = activeTab.getAttribute('aria-controls');
+        panels.forEach(panel => {
+          const show = panel.id === initialTargetId;
+          panel.classList.toggle('show', show);
+          panel.toggleAttribute('hidden', !show);
+        });
+        tabs.forEach(t => {
+          const isActive = t === activeTab;
+          t.classList.toggle('active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          t.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+      });
+    }
+  })();
+</script>
+</html>
+
+</body>

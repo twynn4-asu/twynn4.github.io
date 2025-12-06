@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>HuddleUp</title>
+    <link rel="stylesheet" href="huddleup.css">
+</head>
+<body>
+    <header>
+        <h1>HuddleUp</h1>
+    </header>
+
+ <nav class="site-nav" aria-label="Primary">
+    <ul class="nav-list"></ul>    
+    <b>
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;
+            <a href="schedules.html">Schedules</a>&nbsp;&nbsp;&nbsp;
+            <a href="teamstats.html">Teams and Stats</a>&nbsp;&nbsp;&nbsp;
+        </b>
+    </ul>
+    </nav>
+
+<main id="content" class="home-layout">
+  
+    <h1 class="section-title">Welcome to HuddleUp</h1>
+    <p style='font-family:"Helvetica", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; line-height:1.6;'>
+        Your go-to destination for everything youth sports in your community. Stay connected with real-time game schedules, scores, team stats, and league standings. Get the latest announcements, event updates, and important news all in one place. Whether you’re a player, parent, coach, or fan, Huddle Up keeps you informed and engaged—so you never miss a moment on or off the field.</p>
+
+    
+
+<section class="news">
+    <h2>News + Announcements</h2>
+    <div class="slideshow-container">
+        
+       
+        <div class="slide fade">
+            <img src="images/Game Winning Touchdown.png"/>
+        </div>
+
+        
+        <div class="slide fade">
+            <img src="images/Soccer.png" alt class="Soccer"/>
+        </div>
+
+        
+        <div class="slide fade">
+           <img src="images/Girls Volleyball.png"/>
+        </div>
+        
+    <button class="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="next" aria-label="Next slide">&#10095;</button>
+
+    
+    <div class="dots" aria-label="Slide navigation"></div>
+
+    </div>
+</section>
+
+
+<script>
+  (function () {
+    const container = document.querySelector('.slideshow-container');
+    if (!container) return;
+
+    const slides = Array.from(container.querySelectorAll('.slide'));
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+    const dotsWrap = container.querySelector('.dots');
+
+    let current = 0;
+    const autoMs = 4000; 
+    let timerId = null;
+
+    
+    const dots = slides.map((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'dot';
+      d.type = 'button';
+      d.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      d.addEventListener('click', () => {
+        goTo(i);
+        restartTimer();
+      });
+      dotsWrap && dotsWrap.appendChild(d);
+      return d;
+    });
+
+    function showSlide(idx) {
+      slides.forEach((s, i) => {
+        s.style.display = (i === idx) ? 'block' : 'none';
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
+    }
+
+    function goTo(idx) {
+      current = (idx + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    function startTimer() {
+      stopTimer();
+      timerId = setInterval(() => {
+        next();
+      }, autoMs);
+    }
+
+    function stopTimer() {
+      if (timerId) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    }
+
+    function restartTimer() {
+      
+      startTimer();
+    }
+
+    
+    showSlide(current);
+    startTimer();
+
+    
+    nextBtn.addEventListener('click', () => { next(); restartTimer(); });
+    prevBtn.addEventListener('click', () => { prev(); restartTimer(); });
+
+    
+    container.addEventListener('mouseenter', stopTimer);
+    container.addEventListener('mouseleave', startTimer);
+
+    
+    container.setAttribute('tabindex', '0'); 
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { next(); restartTimer(); }
+      if (e.key === 'ArrowLeft')  { prev(); restartTimer(); }
+    });
+  })();
+</script>
+
+
+   
+    <section class="highlights-header">
+        <h2>Highlights / Stories</h2>
+    </section>
+
+    
+    
+<section class="highlight-grid">
+    <div class="highlight-card">
+        <img src="images/GaEliteChampions.png" alt="GaEliteChampions" </h3>
+
+        <h3>Team Celebration</h3>
+        <p>Your 2025 ChooChoo Bowl Champions! <b>Georgia Elite Stallions</b> .</p>
+    </div>
+
+    <div class="highlight-card">
+        <img src="images/HolliserWynnSpotlight.png" alt="HolliserWynnSpotlight" </h3>
+
+        <h3>Player Spotlight</h3>
+        <p>GMYFL 5U League MVP goes to <b> Hollister Wynn</b>.</p>
+    </div>
+
+    <div class="highlight-card">
+        <img src="images/Tournament.png" alt="Tournament" </h3>
+        <h3>Upcoming Events</h3>
+        <p>Don’t miss our upcoming tournaments and community events.</p>
+    </div>
+
+    
+
+<div class="highlight-card">
+  <div class="media aspect-video">
+    <video class="card-video" controls preload="metadata" poster="assets/videos/soccer.mp4" playsinline>
+      <source src="assets/videos/soccer.mp4"
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <h3>Starts Here</h3>
+  <p>Be apart of something great.</p>
+</div>
+
+
+</section>
+
+</main>
+
+     <footer>
+        <NAV>
+            <b>
+            <a href="contactus.html">Contact Us</a>
+            <a href="faqs.html">FAQs</a> <br>
+             </b>
+        </NAV>
+    <small>
+        <br>
+        <br>
+        <i>Copyright © 2025 HuddleUp</i><br>
+        <a href="mailto:TerranceWynn@huddleup.com">TerranceWynn@huddleup.com</a>
+    </small>
+</footer>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.querySelectorAll(".slide");
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); 
+}
+</script>
+
+
+</body>
+
+
+</html>
